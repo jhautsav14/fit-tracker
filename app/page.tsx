@@ -54,10 +54,10 @@ export default function FitnessTracker() {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-orange-50 dark:from-gray-900 dark:to-gray-800">
       <div className="container mx-auto px-4 py-8">
         <header className="mb-8">
-          <h1 className="text-3xl font-bold font-[Poppins] bg-gradient-to-r from-blue-500 to-orange-500 bg-clip-text text-transparent">
+          <h1 className="text-3xl font-bold font-poppins bg-gradient-to-r from-blue-500 to-orange-500 bg-clip-text text-transparent">
             FitTrack
           </h1>
-          <p className="text-gray-500 dark:text-gray-400 font-[Montserrat]">Tuesday, April 6 • Keep pushing!</p>
+          <p className="text-gray-500 dark:text-gray-400 font-montserrat">Tuesday, April 6 • Keep pushing!</p>
         </header>
 
         <Tabs defaultValue="dashboard" className="mb-8">
@@ -71,10 +71,10 @@ export default function FitnessTracker() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <Card className="overflow-hidden border-none shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <CardHeader className="bg-gradient-to-r from-blue-500 to-blue-600 text-white">
-                  <CardTitle className="flex items-center gap-2 font-[Poppins]">
+                  <CardTitle className="flex items-center gap-2 font-poppins">
                     <Activity className="h-5 w-5" /> Daily Summary
                   </CardTitle>
-                  <CardDescription className="text-blue-100 font-[Montserrat]">Your progress for today</CardDescription>
+                  <CardDescription className="text-blue-100 font-montserrat">Your progress for today</CardDescription>
                 </CardHeader>
                 <CardContent className="pt-6">
                   <div className="space-y-4">
@@ -82,7 +82,7 @@ export default function FitnessTracker() {
                       <div className="flex justify-between mb-2">
                         <div className="flex items-center gap-2">
                           <Flame className="h-4 w-4 text-orange-500" />
-                          <span className="font-medium font-[Montserrat]">Calories</span>
+                          <span className="font-medium font-montserrat">Calories</span>
                         </div>
                         <span className="text-sm font-bold">{calories} / 2000 kcal</span>
                       </div>
@@ -100,7 +100,7 @@ export default function FitnessTracker() {
                       <div className="flex justify-between mb-2">
                         <div className="flex items-center gap-2">
                           <Utensils className="h-4 w-4 text-green-500" />
-                          <span className="font-medium font-[Montserrat]">Protein</span>
+                          <span className="font-medium font-montserrat">Protein</span>
                         </div>
                         <span className="text-sm font-bold">85 / 120 g</span>
                       </div>
@@ -113,7 +113,7 @@ export default function FitnessTracker() {
                       <div className="flex justify-between mb-2">
                         <div className="flex items-center gap-2">
                           <Heart className="h-4 w-4 text-red-500" />
-                          <span className="font-medium font-[Montserrat]">Steps</span>
+                          <span className="font-medium font-montserrat">Steps</span>
                         </div>
                         <span className="text-sm font-bold">7,543 / 10,000</span>
                       </div>
@@ -127,12 +127,10 @@ export default function FitnessTracker() {
 
               <Card className="overflow-hidden border-none shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <CardHeader className="bg-gradient-to-r from-orange-500 to-orange-600 text-white">
-                  <CardTitle className="flex items-center gap-2 font-[Poppins]">
+                  <CardTitle className="flex items-center gap-2 font-poppins">
                     <BarChart3 className="h-5 w-5" /> Weekly Progress
                   </CardTitle>
-                  <CardDescription className="text-orange-100 font-[Montserrat]">
-                    Last 7 days of activity
-                  </CardDescription>
+                  <CardDescription className="text-orange-100 font-montserrat">Last 7 days of activity</CardDescription>
                 </CardHeader>
                 <CardContent className="pt-6 h-[220px]">
                   <ResponsiveContainer width="100%" height="100%">
@@ -170,14 +168,14 @@ export default function FitnessTracker() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <Card className="overflow-hidden border-none shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <CardHeader className="bg-gradient-to-r from-blue-400 to-blue-500 text-white p-4">
-                  <CardTitle className="text-lg flex items-center gap-2 font-[Poppins]">
+                  <CardTitle className="text-lg flex items-center gap-2 font-poppins">
                     <Zap className="h-5 w-5" /> Quick Add
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="pt-4">
                   <div className="space-y-4">
                     <div>
-                      <Label htmlFor="food" className="font-[Montserrat] text-sm font-medium">
+                      <Label htmlFor="food" className="font-montserrat text-sm font-medium">
                         Add Food
                       </Label>
                       <div className="flex mt-1.5 gap-2">
@@ -189,7 +187,7 @@ export default function FitnessTracker() {
                           <Input
                             id="food"
                             placeholder="e.g., Chicken Salad"
-                            className="pr-8 font-[Montserrat] border-blue-100 focus:border-blue-300"
+                            className="pr-8 font-montserrat border-blue-100 focus:border-blue-300"
                             value={foodInput}
                             onChange={(e) => setFoodInput(e.target.value)}
                           />
@@ -221,7 +219,7 @@ export default function FitnessTracker() {
 
               <Card className="overflow-hidden border-none shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <CardHeader className="bg-gradient-to-r from-blue-500 to-blue-600 text-white p-4">
-                  <CardTitle className="text-lg flex items-center gap-2 font-[Poppins]">
+                  <CardTitle className="text-lg flex items-center gap-2 font-poppins">
                     <Utensils className="h-5 w-5" /> Meals Today
                   </CardTitle>
                 </CardHeader>
@@ -232,7 +230,7 @@ export default function FitnessTracker() {
                       whileHover={{ x: 5 }}
                       transition={{ type: "spring", stiffness: 400, damping: 10 }}
                     >
-                      <span className="font-[Montserrat] text-sm">Breakfast</span>
+                      <span className="font-montserrat text-sm">Breakfast</span>
                       <span className="text-sm font-bold">420 kcal</span>
                     </motion.div>
                     <motion.div
@@ -240,7 +238,7 @@ export default function FitnessTracker() {
                       whileHover={{ x: 5 }}
                       transition={{ type: "spring", stiffness: 400, damping: 10 }}
                     >
-                      <span className="font-[Montserrat] text-sm">Lunch</span>
+                      <span className="font-montserrat text-sm">Lunch</span>
                       <span className="text-sm font-bold">650 kcal</span>
                     </motion.div>
                     <motion.div
@@ -248,7 +246,7 @@ export default function FitnessTracker() {
                       whileHover={{ x: 5 }}
                       transition={{ type: "spring", stiffness: 400, damping: 10 }}
                     >
-                      <span className="font-[Montserrat] text-sm">Snack</span>
+                      <span className="font-montserrat text-sm">Snack</span>
                       <span className="text-sm font-bold">180 kcal</span>
                     </motion.div>
                   </div>
@@ -257,14 +255,14 @@ export default function FitnessTracker() {
 
               <Card className="overflow-hidden border-none shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <CardHeader className="bg-gradient-to-r from-blue-600 to-blue-700 text-white p-4">
-                  <CardTitle className="text-lg flex items-center gap-2 font-[Poppins]">
+                  <CardTitle className="text-lg flex items-center gap-2 font-poppins">
                     <Zap className="h-5 w-5" /> Hydration
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="pt-4">
                   <div className="text-center mb-2">
-                    <span className="text-2xl font-bold font-[Poppins]">{water}/8</span>
-                    <p className="text-sm text-gray-500 dark:text-gray-400 font-[Montserrat]">glasses of water</p>
+                    <span className="text-2xl font-bold font-poppins">{water}/8</span>
+                    <p className="text-sm text-gray-500 dark:text-gray-400 font-montserrat">glasses of water</p>
                   </div>
                   <div className="grid grid-cols-4 gap-2 mb-4">
                     {[...Array(8)].map((_, i) => (
@@ -292,11 +290,11 @@ export default function FitnessTracker() {
           <TabsContent value="nutrition">
             <Card className="border-none shadow-lg">
               <CardHeader>
-                <CardTitle className="font-[Poppins]">Nutrition Details</CardTitle>
-                <CardDescription className="font-[Montserrat]">Track your macros and daily intake</CardDescription>
+                <CardTitle className="font-poppins">Nutrition Details</CardTitle>
+                <CardDescription className="font-montserrat">Track your macros and daily intake</CardDescription>
               </CardHeader>
               <CardContent>
-                <p className="text-center text-gray-500 dark:text-gray-400 font-[Montserrat]">
+                <p className="text-center text-gray-500 dark:text-gray-400 font-montserrat">
                   Switch to the Nutrition tab to see detailed breakdown
                 </p>
               </CardContent>
@@ -306,13 +304,11 @@ export default function FitnessTracker() {
           <TabsContent value="activity">
             <Card className="border-none shadow-lg">
               <CardHeader>
-                <CardTitle className="font-[Poppins]">Activity Tracking</CardTitle>
-                <CardDescription className="font-[Montserrat]">
-                  Monitor your workouts and daily movement
-                </CardDescription>
+                <CardTitle className="font-poppins">Activity Tracking</CardTitle>
+                <CardDescription className="font-montserrat">Monitor your workouts and daily movement</CardDescription>
               </CardHeader>
               <CardContent>
-                <p className="text-center text-gray-500 dark:text-gray-400 font-[Montserrat]">
+                <p className="text-center text-gray-500 dark:text-gray-400 font-montserrat">
                   Switch to the Activity tab to see your exercise history
                 </p>
               </CardContent>
@@ -346,7 +342,7 @@ export default function FitnessTracker() {
               whileTap={{ scale: 0.95 }}
             >
               <item.icon className="h-5 w-5 mb-1 text-gray-500 dark:text-gray-400" />
-              <span className="text-xs font-[Montserrat] text-gray-500 dark:text-gray-400">{item.label}</span>
+              <span className="text-xs font-montserrat text-gray-500 dark:text-gray-400">{item.label}</span>
             </motion.button>
           ))}
         </div>
